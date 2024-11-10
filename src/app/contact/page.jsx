@@ -1,19 +1,13 @@
 "use client";
 
 import React, { useState } from "react";
-import { Button } from "@/components/ui/button";
-import { Input } from "@/components/ui/input";
-import { Textarea } from "@/components/ui/textarea";
 import {
   Card,
   CardContent,
   CardDescription,
-  CardHeader,
   CardTitle,
 } from "@/components/ui/card";
-import { Cpu, Mail, Phone, MapPin, Clock } from "lucide-react";
-import Link from "next/link";
-import Footer from "@/components/common/Footer";
+import { Mail, Phone, MapPin, Clock } from "lucide-react";
 
 export default function ContactPage() {
   const [formData, setFormData] = useState({
@@ -108,13 +102,15 @@ export default function ContactPage() {
                     >
                       Name
                     </label>
-                    <Input
+                    <input
                       id="name"
                       name="name"
+                      type="text"
                       placeholder="Your Name"
                       value={formData.name}
                       onChange={handleChange}
                       required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     />
                   </div>
                   <div className="space-y-2">
@@ -124,7 +120,7 @@ export default function ContactPage() {
                     >
                       Email
                     </label>
-                    <Input
+                    <input
                       id="email"
                       name="email"
                       type="email"
@@ -132,6 +128,7 @@ export default function ContactPage() {
                       value={formData.email}
                       onChange={handleChange}
                       required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     />
                   </div>
                   <div className="space-y-2">
@@ -141,13 +138,15 @@ export default function ContactPage() {
                     >
                       Subject
                     </label>
-                    <Input
+                    <input
                       id="subject"
                       name="subject"
+                      type="text"
                       placeholder="What is this regarding?"
                       value={formData.subject}
                       onChange={handleChange}
                       required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     />
                   </div>
                   <div className="space-y-2">
@@ -157,21 +156,22 @@ export default function ContactPage() {
                     >
                       Message
                     </label>
-                    <Textarea
+                    <textarea
                       id="message"
                       name="message"
                       placeholder="Your message here..."
                       value={formData.message}
                       onChange={handleChange}
                       required
+                      className="w-full px-3 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600"
                     />
                   </div>
-                  <Button
+                  <button
                     type="submit"
-                    className="w-full bg-blue-600 text-white hover:bg-blue-700"
+                    className="w-full px-4 py-2 font-medium text-white bg-blue-600 rounded-md hover:bg-blue-700 focus:outline-none"
                   >
                     Send Message
-                  </Button>
+                  </button>
                 </form>
               </div>
             </div>
