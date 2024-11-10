@@ -1,5 +1,7 @@
+import Header from "@/components/common/Header";
 import "./globals.css";
 import Head from "next/head";
+import Footer from "@/components/common/Footer";
 
 export const metadata = {
   title: "Pak Draw | Pakistan First Digital Lottery",
@@ -12,7 +14,11 @@ export default function RootLayout({ children }) {
       <Head>
         <link rel="icon" href="/favicon.ico" type="image/png" />
       </Head>
-      <body className="bg-gray-100">{children}</body>
+      <body className="bg-gray-100">
+        <Header />
+        {children}
+        <Footer />
+      </body>
     </html>
   );
 }

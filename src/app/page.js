@@ -1,122 +1,42 @@
 "use client";
 import Image from "next/image";
 
-import { useState } from "react";
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
-import {
-  Code,
-  Cpu,
-  Globe,
-  Laptop,
-  LayoutGrid,
-  Rocket,
-  Users,
-  CheckCircle,
-  ArrowRight,
-  Menu,
-  X,
-} from "lucide-react";
+import { Code, Globe, Laptop, LayoutGrid, Rocket, Users } from "lucide-react";
 import Link from "next/link";
 
-export default function Home() {
-  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+import Man1 from "@assets/man1.jpg";
+import Man2 from "@assets/man2.jpg";
 
+export default function Home() {
   return (
     <div className="container mx-auto flex flex-col bg-gradient-to-b from-blue-50 to-white">
-      <header className="px-4 md:px-6 sticky top-0 z-50 w-full border-b bg-white/95 backdrop-blur supports-[backdrop-filter]:bg-white/60">
-        <div className="container flex h-16 items-center justify-between">
-          <Link href="/" className="flex items-center space-x-2">
-            <Cpu className="h-10 w-10 text-blue-600" />
-            <span className="hidden sm:inline-block text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
-              Exalted Systems
-            </span>
-          </Link>
-          <nav className="hidden md:flex items-center space-x-6">
-            <Link
-              href="#"
-              className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              Services
-            </Link>
-            <Link
-              href="#"
-              className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              Contact
-            </Link>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Get Started
-            </Button>
-          </nav>
-          <button
-            className="md:hidden"
-            onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-          >
-            {mobileMenuOpen ? (
-              <X className="h-6 w-6" />
-            ) : (
-              <Menu className="h-6 w-6" />
-            )}
-          </button>
-        </div>
-      </header>
-      {mobileMenuOpen && (
-        <div className="md:hidden">
-          <nav className="flex flex-col items-center space-y-4 py-4 bg-white">
-            <Link
-              href="#"
-              className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              Services
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              About
-            </Link>
-            <Link
-              href="#"
-              className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
-            >
-              Contact
-            </Link>
-            <Button className="bg-blue-600 hover:bg-blue-700 text-white">
-              Get Started
-            </Button>
-          </nav>
-        </div>
-      )}
       <main className="flex-1">
-        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-r from-blue-600 via-blue-500 to-cyan-500">
-          <div className="container px-4 md:px-6">
-            <div className="flex flex-col items-center space-y-4 text-center">
-              <div className="space-y-2">
-                <h1 className="text-3xl font-bold tracking-tighter sm:text-4xl md:text-5xl lg:text-6xl/none text-white">
+        <section className="w-full py-12 md:py-24 lg:py-32 xl:py-48 bg-gradient-to-br from-blue-700 via-blue-500 to-cyan-600 relative overflow-hidden">
+          <div className="absolute inset-0 bg-[url('/path-to-your-background-pattern.svg')] opacity-10 bg-center bg-cover pointer-events-none"></div>
+          <div className="container px-4 md:px-6 relative z-10">
+            <div className="flex flex-col items-center space-y-6 text-center">
+              <div className="space-y-4">
+                <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold tracking-tight text-white">
                   Elevate Your Digital Presence
                 </h1>
-                <p className="mx-auto max-w-[700px] text-blue-100 md:text-xl/relaxed lg:text-base/relaxed xl:text-xl/relaxed">
-                  Cutting-edge software solutions tailored to your business
-                  needs. We turn your ideas into reality.
+                <p className="mx-auto max-w-2xl text-blue-100 md:text-lg lg:text-xl font-light tracking-wide">
+                  Transform your ideas into impactful digital solutions. Partner
+                  with us for innovative, custom software tailored to drive your
+                  success.
                 </p>
               </div>
-              <div className="space-x-4">
+              <div className="flex space-x-4">
                 <Button
-                  className="bg-white text-blue-600 hover:bg-blue-50"
+                  className="px-8 py-3 text-lg bg-white text-blue-700 font-semibold rounded-full shadow-md transition-all hover:bg-blue-50 hover:scale-105"
                   size="lg"
                 >
                   Get Started
                 </Button>
                 <Button
                   variant="outline"
-                  className="bg-transparent border-white text-white hover:bg-white hover:text-blue-600"
+                  className="px-8 py-3 text-lg border border-white text-white rounded-full hover:bg-white hover:text-blue-600 transition-all hover:scale-105"
                   size="lg"
                 >
                   Learn More
@@ -124,7 +44,9 @@ export default function Home() {
               </div>
             </div>
           </div>
+          <div className="absolute bottom-0 left-0 right-0 h-24 bg-gradient-to-t from-blue-800 via-transparent"></div>
         </section>
+
         <section className="w-full py-12 md:py-24 lg:py-32">
           <div className="container px-4 md:px-6">
             <h2 className="text-3xl font-bold tracking-tighter sm:text-5xl text-center mb-12 bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
@@ -268,12 +190,14 @@ export default function Home() {
                     "Exalted Systems transformed our business with their innovative software solutions. Their team's expertise and dedication are unmatched.",
                   author: "Jane Doe",
                   position: "CEO, TechCorp",
+                  image: Man1,
                 },
                 {
                   quote:
                     "Working with Exalted Systems was a game-changer for our startup. They delivered a high-quality product on time and within budget.",
                   author: "John Smith",
                   position: "Founder, InnovateCo",
+                  image: Man2,
                 },
               ].map((testimonial, index) => (
                 <div key={index} className="bg-white p-6 rounded-lg shadow-md">
@@ -281,7 +205,9 @@ export default function Home() {
                     &ldquo;{testimonial.quote}&rdquo;
                   </p>
                   <div className="flex items-center">
-                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mr-4"></div>
+                    <div className="w-12 h-12 bg-gradient-to-r from-blue-600 to-cyan-600 rounded-full mr-4">
+                      <Image src={testimonial.image} alt="avatar" />
+                    </div>
                     <div>
                       <h4 className="font-bold text-gray-800">
                         {testimonial.author}
@@ -333,131 +259,6 @@ export default function Home() {
           </div>
         </section>
       </main>
-      <footer className="w-full py-6 bg-gray-800 text-white">
-        <div className="container px-4 md:px-6">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8">
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold">Company</h3>
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    About
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Careers
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Contact
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold">Services</h3>
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Web Development
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Mobile Apps
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Consulting
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold">Resources</h3>
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Blog
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Documentation
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    FAQ
-                  </Link>
-                </li>
-              </ul>
-            </div>
-            <div className="space-y-2">
-              <h3 className="text-lg font-semibold">Legal</h3>
-              <ul className="space-y-1">
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Privacy Policy
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Terms of Service
-                  </Link>
-                </li>
-                <li>
-                  <Link
-                    href="#"
-                    className="hover:text-blue-400 transition-colors"
-                  >
-                    Cookie Policy
-                  </Link>
-                </li>
-              </ul>
-            </div>
-          </div>
-          <div className="mt-8 border-t border-gray-700 pt-4 text-center text-sm">
-            © {new Date().getFullYear()} Exalted Systems. All rights reserved.
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }
