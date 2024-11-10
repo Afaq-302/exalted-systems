@@ -10,7 +10,7 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <Head>
-        {/* <link rel="icon" href="/favicon.ico" type="image/png" /> */}
+        <link rel="icon" href="/favicon.ico" type="image/png" />
       </Head>
       <body className="bg-gray-100">{children}</body>
     </html>
