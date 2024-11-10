@@ -34,7 +34,7 @@ function Header() {
                 About
               </Link>
               <Link
-                href="#"
+                href="contact"
                 className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Contact
