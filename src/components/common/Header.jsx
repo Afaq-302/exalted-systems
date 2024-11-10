@@ -16,25 +16,28 @@ function Header() {
           <div className="container flex h-16 items-center justify-between">
             <Link href="/" className="flex items-center space-x-2">
               <Cpu className="h-10 w-10 text-blue-600" />
-              <span className="hidden sm:inline-block text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
+              <span className="inline-block  text-xl md:text-2xl font-bold bg-clip-text text-transparent bg-gradient-to-r from-blue-600 to-cyan-600">
                 Exalted Systems
               </span>
             </Link>
             <nav className="hidden md:flex items-center space-x-6">
               <Link
                 href="/services"
+                onClick={() => setMobileMenuOpen(false)}
                 className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Services
               </Link>
               <Link
                 href="/about"
+                onClick={() => setMobileMenuOpen(false)}
                 className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 About
               </Link>
               <Link
-                href="contact"
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
                 className="font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Contact
@@ -60,23 +63,29 @@ function Header() {
             <nav className="flex flex-col items-center space-y-4 py-4 bg-white">
               <Link
                 href="/services"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Services
               </Link>
               <Link
                 href="/about"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 About
               </Link>
               <Link
-                href="#"
+                href="/contact"
+                onClick={() => setMobileMenuOpen(false)}
                 className="text-sm font-medium text-gray-500 hover:text-blue-600 transition-colors"
               >
                 Contact
               </Link>
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white">
+              <Button
+                href="/contact"
+                className="bg-blue-600 hover:bg-blue-700 text-white"
+              >
                 Get Started
               </Button>
             </nav>
