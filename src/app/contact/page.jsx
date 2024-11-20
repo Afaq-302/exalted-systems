@@ -68,16 +68,14 @@ export default function ContactPage() {
                       <Phone className="h-6 w-6 text-blue-600" />
                       <div>
                         <CardDescription>Phone</CardDescription>
-                        <CardTitle>+1 (555) 123-4567</CardTitle>
+                        <CardTitle>+92 (123) 123-4567</CardTitle>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4 mb-4">
                       <MapPin className="h-6 w-6 text-blue-600" />
                       <div>
                         <CardDescription>Address</CardDescription>
-                        <CardTitle>
-                          123 Tech Street, Silicon Valley, CA 94000
-                        </CardTitle>
+                        <CardTitle>Blue Area, Islamabad</CardTitle>
                       </div>
                     </div>
                     <div className="flex items-center space-x-4">
